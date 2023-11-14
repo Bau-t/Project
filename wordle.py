@@ -7,7 +7,7 @@ guess = input("We have chosen a five letter word. Enter your guess here: ")
 guess_count = 0
 while guess_count < 5:
     if guess == picked_word:
-        print("You are correct!")
+        print("Correct",guess,"is correct!")
     elif guess != picked_word:
-        print("Incorrect!")
+        print("Nice guess, but that is not correct. Try again.")
         guess_count += 1
