@@ -23,7 +23,7 @@ def compareguess(guess):      #will check each letter in the picked word and com
 
 def guessinggame():
     counter = 0
-    maxcounter = 5
+    maxcounter = 8
     while counter < maxcounter:
         counter += 1
         guess = input("Enter your five-letter guess: ")     #User is prompted
