@@ -12,8 +12,6 @@ picked_word = random.choice(word_list)
 print("\n",Fore.GREEN+" Green","indicates that the letter is in the","\n"," correct spot!","\n")
 print(Fore.YELLOW+" Yellow","indicates that the letter exists in the correct word. (Can show even if you have","\n","already guessed the correct spot)","\n")
 
-print(picked_word,"\n")   #demonstration purposes
-
 def verifychar(guess):
     return guess.isalpha()
 
