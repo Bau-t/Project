@@ -9,8 +9,8 @@ word_list = ["wheel","basic","anger","carry","meant","rapid","lower",
 
 picked_word = random.choice(word_list)
 
-print("\n",Fore.GREEN+" Green","indicates that the letter is in the","\n"," correct spot!","\n")
-print(Fore.YELLOW+" Yellow","indicates that the letter exists in the correct word. (Can show even if you have","\n","already guessed the correct spot)","\n")
+print("\n",Fore.GREEN+" Green","indicates that the letter is in the correct spot!","\n")
+print(Fore.YELLOW+" Yellow","indicates that the letter exists in the correct word. (Can show even if you have already guessed the correct spot)","\n")
 
 def verifychar(guess):
     return guess.isalpha()
@@ -37,7 +37,7 @@ def guessinggame():
     maxcounter = 8
     while counter < maxcounter:
         counter += 1
-        guess = input("Enter your five-letter guess: ")     #User is prompted
+        guess = input("Enter your five-letter guess: ").lower()     #User is prompted
 
         if verifylength(guess) == True and verifychar(guess) == True:
             if guess == picked_word:
@@ -49,7 +49,7 @@ def guessinggame():
                 continue
                             
         elif verifylength(guess) == False or verifychar(guess) == False:
-            print("\n"," Make sure it's five letters or has correct","\n","characters!","\n")
+            print("\n"," Make sure it's five letters or has correct characters!","\n")
             continue
     if counter == maxcounter and guess != picked_word: 
         print("Nope! The word was",Fore.CYAN + picked_word,"\n","----------------------")
